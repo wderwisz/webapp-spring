@@ -1,0 +1,28 @@
+server:
+  port: 8080
+
+#spring:
+#  cloud:
+#    gateway:
+#      default-filters:
+#        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+#      globalcors:
+#        corsConfigurations:
+#          '[/**]':
+#            allowedOrigins: "*"
+#            allowedHeaders: "*"
+#            allowedMethods:
+#              - GET
+#              - POST
+#              - DELETE
+#              - PUT
+#              - OPTIONS
+#      routes:
+#        - id: profession-management
+#          uri: http://localhost:8081
+#          predicates:
+#            - Path=/api/professions/**
+#        - id: character-management
+#          uri: http://localhost:8082
+#          predicates:
+#            - Path=/api/characters/**

@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Main-Class: com.example.microservices.character_management_service.Chara
+ cterManagementServiceApplication
+

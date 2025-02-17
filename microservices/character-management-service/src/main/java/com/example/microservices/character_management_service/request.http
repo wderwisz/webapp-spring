@@ -1,0 +1,68 @@
+### GET all professions
+GET http://localhost:8080/api/professions
+Accept: application/json
+
+### GET a single profession by ID
+GET http://localhost:8080/api/professions/8a7e597a-3e71-4167-8a9c-c3deb85c8101
+Accept: application/json
+
+### GET all characters
+GET http://localhost:8080/api/characters
+Accept: application/json
+
+### GET a single character by ID
+GET http://localhost:8080/api/characters/aacb8802-834c-4a22-8999-117134c4297c
+Accept: application/json
+
+
+
+### POST a new profession
+POST http://localhost:8080/api/professions
+Content-Type: application/json
+
+{
+    "name": "Warrior",
+    "baseArmor": "2",
+    "baseStrength": "6"
+}
+
+### PUT to profession
+PUT http://localhost:8080/api/professions/f2339505-8579-4ad2-bdeb-f9bfd72939cf
+Content-Type: application/json
+
+{
+    "name": "warrior",
+    "baseArmor": "2",
+    "baseStrength": "7"
+}
+
+### POST a new character with professionId as URL param
+POST http://localhost:8080/api/characters/f2339505-8579-4ad2-bdeb-f9bfd72939cf
+Content-Type: application/json
+
+{
+    "name": "Oskar",
+    "level": 5
+}
+
+### PUT to character
+PUT http://localhost:8080/api/characters/28126efd-5bd7-4c9c-87af-3294e39e112b
+Content-Type: application/json
+
+{
+    "name": "Oskar",
+    "level": "8"
+}
+
+
+
+### DELETE a profession
+DELETE http://localhost:8080/api/professions/104d50df-2299-4073-ac6a-7df881c40ff6
+Accept: text/plain
+
+### DELETE a character
+DELETE http://localhost:8080/api/characters/9ec7d0dd-c6ea-4bb1-b4ea-6dca232ea4ef
+Accept: text/plain
+
+### GET a character collection of a profession
+GET http://localhost:8080/api/professions/f2339505-8579-4ad2-bdeb-f9bfd72939cf/characters
